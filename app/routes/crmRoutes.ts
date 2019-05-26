@@ -11,6 +11,18 @@ export class Routes {
       });
     });
 
-    // Review
+    app
+      .route("/review")
+      .get((req: Request, res: Response, next: NextFunction) => {
+        console.log(`Request from: ${req.originalUrl}`);
+        console.log(`Request type: ${req.method}`);
+        next();
+      }, this.reviewController.getReviews)
+      .post(this.reviewController.addNewReview);
+
+    app
+      .route("/review/:reviewId")
+      .get(this.reviewController.getReviewWithID)
+      .delete(this.reviewController.deleteReview);
   }
 }

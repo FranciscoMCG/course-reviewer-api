@@ -2,7 +2,7 @@ import * as mongoose from "mongoose";
 
 const Schema = mongoose.Schema;
 
-export const ReviewSchema = new Schema({
+export const reviewSchema = new Schema({
   firstName: {
     type: String,
     required: "Enter a first name"

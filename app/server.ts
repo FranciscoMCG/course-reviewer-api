@@ -1,24 +1,6 @@
-import * as mongoose from "mongoose";
+import app from "./app";
+const PORT = 3000;
 
-const Schema = mongoose.Schema;
-
-export const ReviewSchema = new Schema({
-  firstName: {
-    type: String,
-    required: "Enter a first name"
-  },
-  lastName: {
-    type: String,
-    required: "Enter a first name"
-  },
-  email: {
-    type: String
-  },
-  review: {
-    type: String
-  },
-  created_date: {
-    type: Date,
-    default: Date.now
-  }
+app.listen(PORT, () => {
+  console.log("Express server listening on port " + PORT);
 });
