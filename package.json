@@ -1,0 +1,19 @@
+{
+  "name": "course-reviewer-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FranciscoMCG/course-reviewer-api.git"
+  },
+  "author": "Francisco Gomes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FranciscoMCG/course-reviewer-api/issues"
+  },
+  "homepage": "https://github.com/FranciscoMCG/course-reviewer-api#readme"
+}
