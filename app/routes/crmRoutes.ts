@@ -1,8 +1,8 @@
 import { Request, Response, NextFunction } from "express";
-import { ContactController } from "../controllers/crmController";
+import { ReviewController } from "../controllers/crmController";
 
 export class Routes {
-  public contactController: ContactController = new ContactController();
+  public reviewController: ReviewController = new ReviewController();
 
   public routes(app): void {
     app.route("/").get((req: Request, res: Response) => {
@@ -11,6 +11,6 @@ export class Routes {
       });
     });
 
-    // Contact
+    // Review
   }
 }

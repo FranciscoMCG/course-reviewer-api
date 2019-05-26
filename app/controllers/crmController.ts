@@ -1,16 +1,16 @@
 import * as mongoose from "mongoose";
-import { ContactSchema } from "../models/crmModel";
+import { ReviewSchema } from "../models/crmModel";
 import { Request, Response } from "express";
 
-const Contact = mongoose.model("Contact", ContactSchema);
+const Review = mongoose.model("Review", ReviewSchema);
 
-export class ContactController {
-  public getContacts(req: Request, res: Response) {
-    Contact.find({}, (err, contact) => {
+export class ReviewController {
+  public getReviews(req: Request, res: Response) {
+    Review.find({}, (err, review) => {
       if (err) {
         res.send(err);
       }
-      res.json(contact);
+      res.json(review);
     });
   }
 }
