@@ -20,9 +20,10 @@ export class Routes {
       }, this.reviewController.getReviews)
       .post(this.reviewController.addNewReview);
 
-    app
-      .route("/reviews/:reviewId")
-      .get(this.reviewController.getReviewWithID)
-      .delete(this.reviewController.deleteReview);
+    // TODO: Build FrontEnd deleteReview
+    // app
+    //   .route("/reviews/:reviewId")
+    //   .get(this.reviewController.getReviewWithID)
+    //   .delete(this.reviewController.deleteReview);
   }
 }

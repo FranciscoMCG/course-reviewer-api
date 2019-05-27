@@ -2,8 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const express = require("express");
 const bodyParser = require("body-parser");
-const crmRoutes_1 = require("./routes/crmRoutes");
 const mongoose = require("mongoose");
+const cors = require("cors");
+const crmRoutes_1 = require("./routes/crmRoutes");
 class App {
     constructor() {
         this.routePrv = new crmRoutes_1.Routes();
@@ -14,6 +15,7 @@ class App {
         this.mongoSetup();
     }
     config() {
+        this.app.use(cors());
         this.app.use(bodyParser.json());
         this.app.use(bodyParser.urlencoded({ extended: true }));
         this.app.use(express.static("public"));

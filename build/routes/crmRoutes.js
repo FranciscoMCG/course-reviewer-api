@@ -12,7 +12,7 @@ class Routes {
             });
         });
         app
-            .route("/review")
+            .route("/reviews")
             .get((req, res, next) => {
             console.log(`Request from: ${req.originalUrl}`);
             console.log(`Request type: ${req.method}`);
@@ -20,7 +20,7 @@ class Routes {
         }, this.reviewController.getReviews)
             .post(this.reviewController.addNewReview);
         app
-            .route("/review/:reviewId")
+            .route("/reviews/:reviewId")
             .get(this.reviewController.getReviewWithID)
             .delete(this.reviewController.deleteReview);
     }

@@ -24,22 +24,22 @@ export class ReviewController {
       res.json(review);
     });
   }
+  // TODO: Build FrontEnd deleteReview
+  // public getReviewWithID(req: Request, res: Response) {
+  //   Review.findById(req.params.reviewId, (err, review) => {
+  //     if (err) {
+  //       res.send(err);
+  //     }
+  //     res.json(review);
+  //   });
+  // }
 
-  public getReviewWithID(req: Request, res: Response) {
-    Review.findById(req.params.reviewId, (err, review) => {
-      if (err) {
-        res.send(err);
-      }
-      res.json(review);
-    });
-  }
-
-  public deleteReview(req: Request, res: Response) {
-    Review.deleteOne({ _id: req.params.reviewId }, (err, review) => {
-      if (err) {
-        res.send(err);
-      }
-      res.json({ message: "Successfully deleted" });
-    });
-  }
+  // public deleteReview(req: Request, res: Response) {
+  //   Review.deleteOne({ _id: req.params.reviewId }, (err, review) => {
+  //     if (err) {
+  //       res.send(err);
+  //     }
+  //     res.json({ message: "Successfully deleted" });
+  //   });
+  // }
 }
