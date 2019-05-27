@@ -14,9 +14,6 @@ export const reviewSchema = new Schema({
   email: {
     type: String
   },
-  phone: {
-    type: Number
-  },
   course: {
     type: String
   },
